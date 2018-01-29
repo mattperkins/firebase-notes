@@ -5,6 +5,7 @@ import firebase from 'firebase/app'
 import 'firebase/database'
 
 import { DB_CONFIG } from './config'
+import Masthead from './Masthead'
 import Note from './Note'
 import NoteForm from './NoteForm'
 
@@ -63,9 +64,8 @@ class App extends React.Component {
         return (
             <div className="notesWrapper">
                 
-                <div className="notesHeader">
-                    <div className="heading">Firebase Notes</div>
-                </div>
+                <Masthead />
+                
                 <div className="notesBody">
                 { 
                     this.state.notes.map((note)=>{
